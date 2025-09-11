@@ -1,103 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>HERE China Mini Site</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <title>HERE China Static Homepage</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body class="hds-web-product-dark-theme bg-background text-foreground">
-
-  <!-- HEADER / NAVBAR -->
+<body class="bg-background text-foreground">
+  <!-- HEADER -->
   <header class="navbar-wrapper">
-    <nav>
-      <div class="navbar-inner">
-        <a href="/">
-          <img src="logo.svg" alt="HERE Logo" width="40" height="40" />
-        </a>
-        <div class="navbar-tabs">
-          <a href="/" class="tab-label">Home</a>
-          <a href="/digital-cockpit.html" class="tab-label">Digital Cockpit</a>
-          <a href="/blog.html" class="tab-label">Blog</a>
-        </div>
-        <div class="navbar-cta">
-          <a href="#" id="contact-btn" class="btn-base btn-primary text-cta font-medium">Contact us</a>
-          <a href="/digital-cockpit.html" class="btn-base btn-secondary text-cta font-medium">Discover Digital Cockpit</a>
-        </div>
+    <nav class="flex items-center justify-between" style="height:71px; width:100vw; padding:0 2rem;">
+      <div class="flex items-center">
+        <img src="src/logo.svg" width="40" height="40" alt="Logo" style="margin-right:2rem;">
+      </div>
+      <ul class="flex items-center gap-8" style="list-style:none; margin:0; padding:0;">
+        <li><a href="index.html" class="tab-label">Home</a></li>
+        <li><a href="digital-cockpit.html" class="tab-label">Digital Cockpit</a></li>
+        <li><a href="#" class="tab-label">Lotus Emeya + HERE</a></li>
+      </ul>
+      <div>
+        <button onclick="openMarketoModal()" class="btn-base btn-primary text-cta font-medium">Contact us</button>
       </div>
     </nav>
   </header>
 
   <!-- HERO SECTION -->
-  <section class="hero-section">
-    <img src="hero.img" alt="Digital cockpit hero" class="hero-bg" />
-    <div class="hero-content">
-      <h1 class="text-headline font-bold mb-8">The unified map for automakers and enterprises</h1>
-      <p class="text-body mb-6">Discover HERE’s unified live map solution for automakers and business fleets, powered by HERE Digital Cockpit.</p>
-      <div class="hero-ctas">
-        <a href="/digital-cockpit.html" class="btn-base btn-primary text-cta font-medium">Discover HERE Digital Cockpit</a>
-        <a href="#" id="contact-btn-hero" class="btn-base btn-secondary text-cta font-medium">Contact sales</a>
+  <section class="hds-web-product-dark-theme bg-background text-foreground px-0 py-12" style="margin-bottom:3rem;">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-headline font-bold mb-6">The unified map for automakers and enterprises</h1>
+    </div>
+    <div class="full-bleed-img">
+      <img src="src/hero.jpg" alt="Hero Image" class="full-bleed" />
+    </div>
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="flex justify-center gap-4 mt-8 mb-8">
+        <a href="digital-cockpit.html" class="btn-base btn-primary text-cta font-medium">Discover HERE Digital Cockpit</a>
+        <button onclick="openMarketoModal()" class="btn-base btn-primary text-cta font-medium">Contact sales</button>
       </div>
     </div>
   </section>
 
   <!-- FEATURE SECTION -->
-  <section class="feature-section">
-    <img src="feature.img" alt="Feature image" class="feature-bg" />
-    <div class="feature-content">
+  <section class="bg-background px-0 py-12" style="margin-bottom:3rem;">
+    <div class="max-w-4xl mx-auto text-center">
       <h2 class="text-headline font-bold mb-6">One map, many solutions</h2>
-      <p class="text-body mb-4">HERE’s unified live map delivers automotive-grade location data to businesses across industries and use cases.</p>
+    </div>
+    <div class="full-bleed-img">
+      <img src="src/feature.jpg" alt="Feature Image" class="full-bleed" />
+    </div>
+    <div class="max-w-4xl mx-auto text-center">
+      <p class="text-body opacity-80 mt-8">HERE’s unified live map delivers automotive-grade location data to businesses across industries and use cases.</p>
     </div>
   </section>
 
-  <!-- GET IN TOUCH CTA -->
-  <section class="cta-block">
-    <div class="cta-block-inner">
-      <h2 class="text-headline font-bold mb-6 text-[#002736]">Get in touch</h2>
-      <p class="text-body mb-8 text-[#002736]">Let’s talk about how you can use a unified live map to build superior experiences.</p>
-      <a href="#" id="contact-btn-cta" class="btn-base btn-primary text-cta font-medium">Contact us</a>
-    </div>
+  <!-- CTA SECTION -->
+  <section class="bg-background px-0 py-16 text-center">
+    <h2 class="text-headline font-bold mb-6">Get in touch</h2>
+    <p class="text-body opacity-80 mb-8">Let’s talk about how you can use a unified live map to build superior experiences.</p>
+    <button onclick="openMarketoModal()" class="btn-base btn-primary text-cta font-medium">Contact us</button>
   </section>
-
-  <!-- MODAL CONTACT FORM -->
-  <div id="contact-modal" class="modal-overlay" style="display: none;">
-    <div class="modal-content">
-      <button id="close-modal" class="modal-close" aria-label="Close">&times;</button>
-      <h3 class="text-headline font-bold mb-4">Contact us</h3>
-      <!-- Marketo form embed code goes here -->
-      <form id="simple-contact-form">
-        <input type="text" name="name" placeholder="Name" required />
-        <input type="email" name="email" placeholder="Email" required />
-        <textarea name="message" placeholder="Message" rows="4" required></textarea>
-        <button type="submit" class="btn-base btn-primary text-cta font-medium">Submit</button>
-      </form>
-      <div id="form-success" class="hidden text-body mt-4 text-green-700">Thank you! We'll be in touch soon.</div>
-    </div>
-  </div>
 
   <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-inner">
-      <div>
-        <p class="text-body font-medium">&copy; 2025 HERE Technologies</p>
-      </div>
-      <div class="footer-links">
-        <a href="/privacy" class="text-body opacity-80">Privacy</a>
-        <a href="/terms" class="text-body opacity-80">Terms</a>
-        <a href="/contact" class="text-body opacity-80">Contact</a>
-      </div>
-    </div>
+  <footer class="bg-background py-8 text-center text-body opacity-80 mt-12">
+    &copy; 2025 HERE Technologies. All rights reserved.
   </footer>
 
   <script src="main.js"></script>
-  <script>
-    // Extra: allow all "Contact" buttons to open the modal
-    document.querySelectorAll('#contact-btn, #contact-btn-hero, #contact-btn-cta').forEach(function(btn){
-      btn.addEventListener('click', function(e){
-        e.preventDefault();
-        document.getElementById('contact-modal').style.display = 'flex';
-      });
-    });
-  </script>
 </body>
 </html>
