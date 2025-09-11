@@ -337,47 +337,44 @@ body {
 }
 /* Digital Cockpit Stats Bar */
 .dc-stats-bar {
-  background: #173142; /* Matches the dark blue in screenshot */
+  background: #173142;
   padding: 48px 0 40px 0;
 }
 .dc-stats-bar-content {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 64px;
-  max-width: 1200px;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 1080px;
   margin: 0 auto;
-  flex-wrap: wrap;
 }
 .dc-stat-item {
-  text-align: left;
-  min-width: 320px;
+  text-align: center;
   display: flex;
-  align-items: center;
+  justify-content: center;
+  align-items: baseline;
+  font-size: 1.18rem;
 }
 .dc-stat-number {
   font-family: 'FiraGO-Bold', Arial, sans-serif;
   font-size: 2.8rem;
   font-weight: 700;
-  color: #36e6ef; /* Aqua */
+  color: #36e6ef;
   margin-right: 12px;
   line-height: 1;
 }
 .dc-stat-caption {
-  font-size: 1.15rem;
   color: #fff;
   font-weight: 400;
   line-height: 1.3;
+  font-size: 1.15rem;
+  letter-spacing: 0.01em;
 }
-@media (max-width: 900px) {
+@media (min-width: 800px) {
   .dc-stats-bar-content {
-    flex-direction: column;
-    gap: 32px;
-    align-items: center;
+    flex-direction: row;
+    gap: 64px;
   }
   .dc-stat-item {
-    min-width: 0;
-    justify-content: center;
-    text-align: center;
+    font-size: 1.15rem;
   }
 }
