@@ -2,42 +2,68 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>HERE WEX China Static Homepage</title>
+  <title>HERE China Static Homepage</title>
   <link rel="stylesheet" href="styles.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>
-  <!-- HEADER (already included in your header partial) -->
+<body class="bg-background text-foreground">
+  <!-- HEADER -->
+  <header class="navbar-wrapper">
+    <nav class="flex items-center justify-between" style="height:71px; width:100vw; padding:0 2rem;">
+      <div class="flex items-center">
+        <img src="src/logo.svg" width="40" height="40" alt="Logo" style="margin-right:2rem;">
+      </div>
+      <ul class="flex items-center gap-8" style="list-style:none; margin:0; padding:0;">
+        <li><a href="index.html" class="tab-label">Home</a></li>
+        <li><a href="digital-cockpit.html" class="tab-label">Digital Cockpit</a></li>
+        <li><a href="#" class="tab-label">Lotus Emeya + HERE</a></li>
+      </ul>
+      <div>
+        <button onclick="openMarketoModal()" class="btn-base btn-primary text-cta font-medium">Contact us</button>
+      </div>
+    </nav>
+  </header>
 
   <!-- HERO SECTION -->
-  <section class="hds-web-product-dark-theme bg-background text-foreground px-8 py-12" style="margin-bottom: 3rem;">
+  <section class="hds-web-product-dark-theme bg-background text-foreground px-0 py-12" style="margin-bottom:3rem;">
     <div class="max-w-4xl mx-auto text-center">
       <h1 class="text-headline font-bold mb-6">The unified map for automakers and enterprises</h1>
-      <img src="src/hero.jpg" alt="Hero Image" class="w-full h-auto rounded-lg shadow-md mb-10" />
-      <div class="flex justify-center gap-4 mb-8">
-        <a href="digital-cockpit.html" class="btn-base btn-primary text-cta font-medium" style="background:#00ECFF;color:#000;">Discover HERE Digital Cockpit</a>
-        <button onclick="openMarketoModal()" class="btn-base btn-primary text-cta font-medium" style="background:#00ECFF;color:#000;">Contact sales</button>
+    </div>
+    <div class="full-bleed-img">
+      <img src="src/hero.jpg" alt="Hero Image" class="full-bleed" />
+    </div>
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="flex justify-center gap-4 mt-8 mb-8">
+        <a href="digital-cockpit.html" class="btn-base btn-primary text-cta font-medium">Discover HERE Digital Cockpit</a>
+        <button onclick="openMarketoModal()" class="btn-base btn-primary text-cta font-medium">Contact sales</button>
       </div>
     </div>
   </section>
 
   <!-- FEATURE SECTION -->
-  <section class="bg-background px-8 py-12" style="margin-bottom: 3rem;">
+  <section class="bg-background px-0 py-12" style="margin-bottom:3rem;">
     <div class="max-w-4xl mx-auto text-center">
       <h2 class="text-headline font-bold mb-6">One map, many solutions</h2>
-      <img src="src/feature.jpg" alt="Feature Image" class="w-full h-auto rounded-lg shadow-md mb-8" />
-      <p class="text-body opacity-80">HERE’s unified live map delivers automotive-grade location data to businesses across industries and use cases.</p>
+    </div>
+    <div class="full-bleed-img">
+      <img src="src/feature.jpg" alt="Feature Image" class="full-bleed" />
+    </div>
+    <div class="max-w-4xl mx-auto text-center">
+      <p class="text-body opacity-80 mt-8">HERE’s unified live map delivers automotive-grade location data to businesses across industries and use cases.</p>
     </div>
   </section>
 
   <!-- CTA SECTION -->
-  <section style="background:#00ECFF;" class="py-20 text-center">
-    <h2 class="text-headline font-bold mb-6" style="color:#002736;">Get in touch</h2>
-    <p class="text-body opacity-80 mb-8" style="color:#002736;">Let’s talk about how you can use a unified live map to build superior experiences.</p>
-    <button onclick="openMarketoModal()" class="btn-base btn-primary text-cta font-medium" style="background:#fff;color:#002736;">Contact us</button>
+  <section class="bg-background px-0 py-16 text-center">
+    <h2 class="text-headline font-bold mb-6">Get in touch</h2>
+    <p class="text-body opacity-80 mb-8">Let’s talk about how you can use a unified live map to build superior experiences.</p>
+    <button onclick="openMarketoModal()" class="btn-base btn-primary text-cta font-medium">Contact us</button>
   </section>
 
-  <!-- FOOTER (if needed) -->
+  <!-- FOOTER -->
+  <footer class="bg-background py-8 text-center text-body opacity-80 mt-12">
+    &copy; 2025 HERE Technologies. All rights reserved.
+  </footer>
 
   <script src="main.js"></script>
 </body>
