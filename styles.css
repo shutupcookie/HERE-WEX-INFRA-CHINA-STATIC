@@ -1,44 +1,58 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'FiraGO', sans-serif;
+  font-family: 'FiraGO', Arial, sans-serif;
   background: #e9f4f9;
-  color: #002736e8;
+  color: #002736;
 }
 
-/* --- Global Navigation Header styles --- */
+@font-face {
+  font-family: 'FiraGO';
+  src: url('src/FiraGO-Regular.woff2') format('woff2');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'FiraGO';
+  src: url('src/FiraGO-Bold.woff2') format('woff2');
+  font-weight: 700;
+}
+
+/* Navigation Styles */
 .navbar {
   position: sticky;
   top: 0;
-  width: 100%;
+  width: 100vw;
   background: #fff;
-  border-bottom: 1px solid #e4e4e4;
+  box-shadow: 0 1px 0 #e5e7eb;
   z-index: 100;
 }
-
 .navbar-container {
+  max-width: 1600px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 32px;
-  height: 90px;
+  height: 88px;
+  padding: 0 3vw;
+  justify-content: space-between;
 }
-
+.navbar-logo {
+  height: 48px;
+  width: 48px;
+  margin-right: 32px;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+}
 .navbar-logo img {
   height: 48px;
   width: auto;
   display: block;
 }
-
 .navbar-menu {
   flex: 1;
   display: flex;
-  justify-content: flex-start;
-  margin-left: 32px;
+  align-items: center;
 }
-
 .navbar-links {
   display: flex;
   gap: 48px;
@@ -46,52 +60,51 @@ body {
   margin: 0;
   padding: 0;
 }
-
 .navbar-link {
-  font-size: 1.4rem;
+  font-family: 'FiraGO', Arial, sans-serif;
+  font-size: 1.45rem;
   font-weight: 700;
-  color: #22323f;
+  color: #002736e8;
   text-decoration: none;
   padding: 8px 0;
+  letter-spacing: 0.01em;
   transition: color 0.2s;
-  letter-spacing: 0.02em;
 }
-
 .navbar-link:hover,
 .navbar-link:focus {
   color: #00ece7;
 }
-
 .navbar-actions {
   display: flex;
   align-items: center;
-  margin-left: auto;
-  gap: 24px;
+  margin-left: 32px;
 }
 
+/* CTA Button */
 .btn-cta {
   background: linear-gradient(90deg, #6df3f8 0%, #96f7d2 100%);
-  color: #22323f;
+  color: #002736;
+  font-family: 'FiraGO', Arial, sans-serif;
   font-weight: 700;
+  font-size: 1.25rem;
   border: none;
-  font-size: 1.3rem;
   border-radius: 999px;
-  padding: 20px 60px;
+  padding: 22px 60px;
   cursor: pointer;
-  text-decoration: none;
   box-shadow: none;
+  text-align: center;
+  text-decoration: none;
+  margin-left: 32px;
   transition: background 0.2s, color 0.2s;
   display: inline-block;
-  margin-right: 32px;
 }
-
 .btn-cta:hover,
 .btn-cta:focus {
   background: linear-gradient(90deg, #81f4f7 0%, #b7fadf 100%);
-  color: #22323f;
+  color: #002736;
 }
 
-/* --- Hero Section Styles --- */
+/* Hero Section Styles */
 .hero-section {
   position: relative;
   width: 100vw;
@@ -128,45 +141,40 @@ body {
   text-align: center;
 }
 .hero-content h1 {
-  font-size: 3rem;
-  font-weight: bold;
+  font-family: 'FiraGO', Arial, sans-serif;
+  font-size: 3.4rem;
+  font-weight: 700;
   margin-bottom: 2rem;
-  font-family: 'FiraGO', sans-serif;
   line-height: 1.1;
-  text-shadow: 0 3px 24px rgba(0,0,0,0.3);
+  text-shadow: 0 3px 24px rgba(0,0,0,0.45);
 }
 .hero-buttons {
   display: flex;
-  gap: 1.5rem;
+  gap: 2.1rem;
   justify-content: center;
+  margin-top: 1.5rem;
 }
-.hero-buttons .btn,
 .hero-buttons .btn-cta {
   background: linear-gradient(90deg, #6df3f8 0%, #96f7d2 100%);
-  color: #22323f;
+  color: #002736;
+  font-family: 'FiraGO', Arial, sans-serif;
   font-weight: 700;
   border: none;
   min-width: 210px;
-  font-size: 1.1rem;
-  padding: 1rem 2rem;
+  font-size: 1.18rem;
+  padding: 1.1rem 2.1rem;
   border-radius: 9999px;
-  transition: filter .2s;
-  cursor: pointer;
-  text-decoration: none;
-  box-shadow: none;
-  display: inline-block;
+  margin: 0 8px;
 }
-.hero-buttons .btn:hover,
 .hero-buttons .btn-cta:hover {
   filter: brightness(0.95);
 }
 
-/* --- Feature Section Styles --- */
+/* Feature Section Styles */
 .feature-section {
   width: 100vw;
   background: #e9f4f9;
   text-align: center;
-  padding: 0;
   margin-bottom: 0;
 }
 .feature-image {
@@ -182,17 +190,19 @@ body {
   padding: 3rem 1rem 4rem 1rem;
 }
 .feature-content h2 {
-  font-size: 2.2rem;
-  font-weight: bold;
+  font-family: 'FiraGO', Arial, sans-serif;
+  font-size: 2.3rem;
+  font-weight: 700;
   margin-bottom: 1.5rem;
+  color: #002736;
 }
 .feature-content p {
-  font-size: 1.1rem;
+  font-size: 1.11rem;
   color: #002736e8;
   opacity: .85;
 }
 
-/* --- CTA Section --- */
+/* CTA Section */
 .cta-section {
   width: 100vw;
   background: #e9f4f9;
@@ -200,33 +210,32 @@ body {
   padding: 5rem 0 4rem 0;
 }
 .cta-section h2 {
+  font-family: 'FiraGO', Arial, sans-serif;
   font-size: 2.2rem;
-  font-weight: bold;
+  font-weight: 700;
   margin-bottom: 1.5rem;
+  color: #002736;
 }
 .cta-section p {
   font-size: 1.1rem;
   color: #002736e8;
   opacity: .85;
 }
-.cta-section .btn,
 .cta-section .btn-cta {
   background: linear-gradient(90deg, #6df3f8 0%, #96f7d2 100%);
-  color: #22323f;
+  color: #002736;
+  font-family: 'FiraGO', Arial, sans-serif;
   font-weight: 700;
   border: none;
   min-width: 210px;
   font-size: 1.1rem;
   padding: 1rem 2rem;
   border-radius: 9999px;
+  margin-top: 2rem;
   transition: filter .2s;
-  cursor: pointer;
-  text-decoration: none;
-  box-shadow: none;
-  display: inline-block;
 }
 
-/* --- Footer --- */
+/* Footer */
 .footer {
   width: 100vw;
   background: #fff;
@@ -237,26 +246,24 @@ body {
   border-top: 1px solid #e5e7eb;
 }
 
-/* --- Responsive --- */
+/* Responsive */
 @media (max-width: 900px) {
   .navbar-container {
     flex-direction: column;
     height: auto;
-    padding: 0 12px;
-    gap: 8px;
+    padding: 0 1rem;
+    gap: 6px;
   }
-  .navbar-menu {
-    margin-left: 0;
-    width: 100%;
+  .navbar-logo {
+    margin-right: 0;
   }
   .navbar-links {
-    gap: 20px;
+    gap: 28px;
   }
-  .btn-cta, .hero-buttons .btn-cta, .hero-buttons .btn, .cta-section .btn, .cta-section .btn-cta {
-    padding: 16px 32px;
+  .btn-cta, .hero-buttons .btn-cta, .cta-section .btn-cta {
+    padding: 14px 32px;
     font-size: 1rem;
-    margin-right: 0;
-    min-width: 130px;
+    min-width: 120px;
   }
   .hero-section,
   .hero-image,
@@ -264,14 +271,16 @@ body {
   .hero-content {
     height: 400px;
   }
+  .hero-content h1,
+  .feature-content h2,
+  .cta-section h2 {
+    font-size: 1.35rem;
+  }
   .feature-image {
-    height: 190px;
+    height: 160px;
   }
   .feature-content,
   .cta-section {
     padding: 2rem 1rem;
-  }
-  .hero-content h1, .feature-content h2, .cta-section h2 {
-    font-size: 1.7rem;
   }
 }
