@@ -1,61 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
   <meta charset="UTF-8">
-  <title>Digital Cockpit - HERE WEX INFRA CHINA STATIC</title>
+  <title>数字座舱 | HERE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="hds-web-product-light-theme">
+<body>
+  <!-- Global Navigation (reuse navbar.html) -->
+  <!--#include file="src/navbar.html" -->
 
-  <header class="navbar-wrapper">
-    <img src="src/logo.svg" width="40" height="40" alt="Logo">
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="digital-cockpit.html" class="active">Digital Cockpit</a>
-      <a href="blog.html">Blog</a>
-    </nav>
-    <a href="#" class="btn-base btn-primary" id="contact-btn">Contact Us</a>
-  </header>
-
-  <main>
-    <section class="hero">
-      <h1 class="text-headline font-bold">Digital Cockpit Platform</h1>
-      <p class="text-body">Experience the future of in-vehicle connectivity with HERE’s Digital Cockpit platform for China. Seamless navigation, infotainment, and smart integrations designed for the Chinese automotive market.</p>
-      <div style="margin:2rem 0;">
-        <img src="src/digital-cockpit.jpg" alt="Digital Cockpit Image">
-      </div>
-      <div class="prose" style="text-align: left; max-width: 700px; margin: 0 auto;">
-        <h2>Key Features</h2>
-        <ul>
-          <li>Integrated maps and navigation based on HERE data</li>
-          <li>Real-time traffic and local POIs</li>
-          <li>OTA updates and seamless connectivity</li>
-          <li>Customizable infotainment widgets</li>
-          <li>Smart voice assistant integration</li>
-        </ul>
-        <h2 style="margin-top:2rem;">Why HERE Digital Cockpit?</h2>
-        <p>
-          Unlock a new level of driver experience with a platform trusted by leading automakers.
-        </p>
-        <p>
-          For more information and partnership inquiries, use the Contact Us button.
-        </p>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    &copy; 2025 HERE WEX INFRA CHINA STATIC
-  </footer>
-
-  <div id="contact-modal" class="modal">
-    <div class="modal-content">
-      <button id="close-modal">Close</button>
-      <div id="marketo-form">
-        <p style="margin-top:1rem;">Marketo Form Placeholder</p>
+  <!-- Hero Section -->
+  <section class="hero-section dc-hero" style="background-image: url('src/digital-cockpit-hero.jpg');">
+    <div class="hero-overlay">
+      <div class="container hero-content">
+        <h1 class="hero-title">部署数字导航体验</h1>
+        <p class="hero-subtitle">为数字座舱打造更安全、高效、便捷的互联导航体验。</p>
+        <a href="/contact.html" class="btn btn-primary hero-cta">联系我们</a>
       </div>
     </div>
-  </div>
-  <script src="main.js"></script>
+  </section>
+
+  <!-- Footer (reuse global footer if available) -->
+  <!--#include file="src/footer.html" -->
 </body>
 </html>
