@@ -622,26 +622,8 @@ body {
     padding: 0 10px;
   }
 }
-/* Minimal Global Footer - Text Logo */
-.global-footer {
-  background: #173142;
-  padding: 40px 0 22px 0;
-  width: 100vw;
-  font-family: 'FiraGO-Regular', Arial, sans-serif;
-}
-.footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 28px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-.footer-brand {
-  display: flex;
-  align-items: center;
-}
+/* Global Footer with QR Code */
+
 /* Footer with QR code */
 .global-footer {
   background: #173142;
@@ -740,3 +722,4 @@ body {
     font-size: 0.98rem;
   }
 }
+
