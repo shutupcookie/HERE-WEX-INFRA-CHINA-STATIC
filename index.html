@@ -21,7 +21,7 @@
           <a href="/blog.html" class="tab-label">Blog</a>
         </div>
         <div class="navbar-cta">
-          <a href="#contact-form" class="btn-base btn-primary text-cta font-medium">Contact us</a>
+          <a href="#" id="contact-btn" class="btn-base btn-primary text-cta font-medium">Contact us</a>
           <a href="/digital-cockpit.html" class="btn-base btn-secondary text-cta font-medium">Discover Digital Cockpit</a>
         </div>
       </div>
@@ -36,7 +36,7 @@
       <p class="text-body mb-6">Discover HERE’s unified live map solution for automakers and business fleets, powered by HERE Digital Cockpit.</p>
       <div class="hero-ctas">
         <a href="/digital-cockpit.html" class="btn-base btn-primary text-cta font-medium">Discover HERE Digital Cockpit</a>
-        <a href="#contact-form" class="btn-base btn-secondary text-cta font-medium">Contact sales</a>
+        <a href="#" id="contact-btn-hero" class="btn-base btn-secondary text-cta font-medium">Contact sales</a>
       </div>
     </div>
   </section>
@@ -55,13 +55,14 @@
     <div class="cta-block-inner">
       <h2 class="text-headline font-bold mb-6 text-[#002736]">Get in touch</h2>
       <p class="text-body mb-8 text-[#002736]">Let’s talk about how you can use a unified live map to build superior experiences.</p>
-      <a href="#contact-form" class="btn-base btn-primary text-cta font-medium">Contact us</a>
+      <a href="#" id="contact-btn-cta" class="btn-base btn-primary text-cta font-medium">Contact us</a>
     </div>
   </section>
 
-  <!-- CONTACT FORM -->
-  <section id="contact-form" class="contact-section">
-    <div class="contact-inner">
+  <!-- MODAL CONTACT FORM -->
+  <div id="contact-modal" class="modal-overlay" style="display: none;">
+    <div class="modal-content">
+      <button id="close-modal" class="modal-close" aria-label="Close">&times;</button>
       <h3 class="text-headline font-bold mb-4">Contact us</h3>
       <!-- Marketo form embed code goes here -->
       <form id="simple-contact-form">
@@ -72,7 +73,7 @@
       </form>
       <div id="form-success" class="hidden text-body mt-4 text-green-700">Thank you! We'll be in touch soon.</div>
     </div>
-  </section>
+  </div>
 
   <!-- FOOTER -->
   <footer class="footer">
@@ -89,5 +90,14 @@
   </footer>
 
   <script src="main.js"></script>
+  <script>
+    // Extra: allow all "Contact" buttons to open the modal
+    document.querySelectorAll('#contact-btn, #contact-btn-hero, #contact-btn-cta').forEach(function(btn){
+      btn.addEventListener('click', function(e){
+        e.preventDefault();
+        document.getElementById('contact-modal').style.display = 'flex';
+      });
+    });
+  </script>
 </body>
 </html>
