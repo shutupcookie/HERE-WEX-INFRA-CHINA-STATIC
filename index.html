@@ -7,37 +7,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-  <!-- HEADER (already included in your header partial) -->
+  <!-- HEADER -->
+  <header class="navbar">
+    <div class="navbar-inner">
+      <img src="src/logo.svg" alt="HERE logo" class="navbar-logo">
+      <nav class="navbar-links">
+        <a href="index.html">Home</a>
+        <a href="digital-cockpit.html">Digital Cockpit</a>
+        <a href="#">Lotus Emeya + HERE</a>
+      </nav>
+      <button class="btn-base btn-primary navbar-cta">Contact us</button>
+    </div>
+  </header>
 
   <!-- HERO SECTION -->
-  <section class="hds-web-product-dark-theme bg-background text-foreground px-8 py-12" style="margin-bottom: 3rem;">
-    <div class="max-w-4xl mx-auto text-center">
-      <h1 class="text-headline font-bold mb-6">The unified map for automakers and enterprises</h1>
-      <img src="src/hero.jpg" alt="Hero Image" class="w-full h-auto rounded-lg shadow-md mb-10" />
-      <div class="flex justify-center gap-4 mb-8">
-        <a href="digital-cockpit.html" class="btn-base btn-primary text-cta font-medium" style="background:#00ECFF;color:#000;">Discover HERE Digital Cockpit</a>
-        <button onclick="openMarketoModal()" class="btn-base btn-primary text-cta font-medium" style="background:#00ECFF;color:#000;">Contact sales</button>
+  <section class="hero-section">
+    <img src="src/hero.jpg" alt="Hero Image" class="hero-image">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="text-headline font-bold">The unified map for automakers and enterprises</h1>
+      <div class="hero-buttons">
+        <a href="digital-cockpit.html" class="btn-base btn-primary">Discover HERE Digital Cockpit</a>
+        <button class="btn-base btn-primary" onclick="openMarketoModal()">Contact sales</button>
       </div>
     </div>
   </section>
 
   <!-- FEATURE SECTION -->
-  <section class="bg-background px-8 py-12" style="margin-bottom: 3rem;">
-    <div class="max-w-4xl mx-auto text-center">
+  <section class="feature-section">
+    <img src="src/feature.jpg" alt="Feature Image" class="feature-image">
+    <div class="feature-content">
       <h2 class="text-headline font-bold mb-6">One map, many solutions</h2>
-      <img src="src/feature.jpg" alt="Feature Image" class="w-full h-auto rounded-lg shadow-md mb-8" />
       <p class="text-body opacity-80">HERE’s unified live map delivers automotive-grade location data to businesses across industries and use cases.</p>
     </div>
   </section>
 
   <!-- CTA SECTION -->
-  <section style="background:#00ECFF;" class="py-20 text-center">
-    <h2 class="text-headline font-bold mb-6" style="color:#002736;">Get in touch</h2>
-    <p class="text-body opacity-80 mb-8" style="color:#002736;">Let’s talk about how you can use a unified live map to build superior experiences.</p>
-    <button onclick="openMarketoModal()" class="btn-base btn-primary text-cta font-medium" style="background:#fff;color:#002736;">Contact us</button>
+  <section class="cta-section">
+    <h2 class="text-headline font-bold mb-6">Get in touch</h2>
+    <p class="text-body opacity-80 mb-8">Let’s talk about how you can use a unified live map to build superior experiences.</p>
+    <button class="btn-base btn-primary" onclick="openMarketoModal()">Contact us</button>
   </section>
 
-  <!-- FOOTER (if needed) -->
+  <!-- FOOTER -->
+  <footer class="footer">
+    &copy; 2025 HERE Technologies. All rights reserved.
+  </footer>
 
   <script src="main.js"></script>
 </body>
