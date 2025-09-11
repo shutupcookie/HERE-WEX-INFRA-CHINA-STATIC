@@ -560,3 +560,65 @@ body {
     gap: 36px;
   }
 }
+/* Global Contact Us Section */
+.contact-global-section {
+  width: 100vw;
+  background: #5ae7e5;
+  padding: 110px 0 110px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-global-content {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+.contact-global-title {
+  font-family: 'FiraGO-Bold', Arial, sans-serif;
+  font-size: 4rem;
+  font-weight: 700;
+  color: #173142;
+  margin-bottom: 32px;
+  letter-spacing: 0.01em;
+}
+.contact-global-subheading {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #173142;
+  margin-bottom: 52px;
+  letter-spacing: 0.01em;
+}
+.contact-global-btn {
+  padding: 20px 44px;
+  font-size: 1.18rem;
+  font-weight: 500;
+  color: #173142;
+  background: #fff;
+  border: none;
+  border-radius: 32px;
+  cursor: pointer;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px 0 rgba(23,49,66,0.05);
+}
+.contact-global-btn:hover {
+  background: #e9f2f5;
+}
+@media (max-width: 700px) {
+  .contact-global-title {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+  }
+  .contact-global-subheading {
+    font-size: 1.05rem;
+    margin-bottom: 32px;
+  }
+  .contact-global-btn {
+    padding: 14px 28px;
+    font-size: 1rem;
+  }
+  .contact-global-content {
+    padding: 0 10px;
+  }
+}
