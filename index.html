@@ -2,55 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>HERE WEX INFRA CHINA STATIC</title>
+  <title>HERE WEX China Static Homepage</title>
   <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body class="hds-web-product-light-theme">
+<body>
+  <!-- HEADER (already included in your header partial) -->
 
-  <!-- Header -->
-  <header class="navbar-wrapper">
-    <img src="src/logo.svg" width="40" height="40" alt="Logo">
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="digital-cockpit.html">Digital Cockpit</a>
-      <a href="blog.html">Blog</a>
-    </nav>
-    <a href="#" class="btn-base btn-primary" id="contact-btn">Contact Us</a>
-  </header>
-
-  <main>
-    <section class="hero">
-      <h1 class="text-headline font-bold">Deploy digital navigation experiences</h1>
-      <p class="text-body">Powered by HERE Design System</p>
-    </section>
-    <section class="cards">
-      <div class="card">
-        <h2 class="text-headline">Editorial Card Example</h2>
-        <p class="text-body">This is a sample editorial card. You can add more cards or sections as needed.</p>
-      </div>
-      <div class="card">
-        <h2 class="text-headline">Flexible Card Example</h2>
-        <p class="text-body">This is a flexible card, also powered by HDS design tokens.</p>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    &copy; 2025 HERE WEX INFRA CHINA STATIC
-  </footer>
-
-  <!-- Marketo Modal -->
-  <div id="contact-modal" class="modal">
-    <div class="modal-content">
-      <button id="close-modal">Close</button>
-      <!-- Marketo Embed Here -->
-      <div id="marketo-form">
-        <!-- Example: -->
-        <!-- <iframe src="YOUR_MARKETO_FORM_URL" width="100%" height="300" frameborder="0"></iframe> -->
-        <p style="margin-top:1rem;">Marketo Form Placeholder</p>
+  <!-- HERO SECTION -->
+  <section class="hds-web-product-dark-theme bg-background text-foreground px-8 py-12" style="margin-bottom: 3rem;">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-headline font-bold mb-6">The unified map for automakers and enterprises</h1>
+      <img src="src/hero.jpg" alt="Hero Image" class="w-full h-auto rounded-lg shadow-md mb-10" />
+      <div class="flex justify-center gap-4 mb-8">
+        <a href="digital-cockpit.html" class="btn-base btn-primary text-cta font-medium" style="background:#00ECFF;color:#000;">Discover HERE Digital Cockpit</a>
+        <button onclick="openMarketoModal()" class="btn-base btn-primary text-cta font-medium" style="background:#00ECFF;color:#000;">Contact sales</button>
       </div>
     </div>
-  </div>
+  </section>
+
+  <!-- FEATURE SECTION -->
+  <section class="bg-background px-8 py-12" style="margin-bottom: 3rem;">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-headline font-bold mb-6">One map, many solutions</h2>
+      <img src="src/feature.jpg" alt="Feature Image" class="w-full h-auto rounded-lg shadow-md mb-8" />
+      <p class="text-body opacity-80">HERE’s unified live map delivers automotive-grade location data to businesses across industries and use cases.</p>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section style="background:#00ECFF;" class="py-20 text-center">
+    <h2 class="text-headline font-bold mb-6" style="color:#002736;">Get in touch</h2>
+    <p class="text-body opacity-80 mb-8" style="color:#002736;">Let’s talk about how you can use a unified live map to build superior experiences.</p>
+    <button onclick="openMarketoModal()" class="btn-base btn-primary text-cta font-medium" style="background:#fff;color:#002736;">Contact us</button>
+  </section>
+
+  <!-- FOOTER (if needed) -->
+
   <script src="main.js"></script>
 </body>
 </html>
